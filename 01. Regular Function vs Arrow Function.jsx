@@ -7,3 +7,7 @@ export default Eat;
 
 
 // Arrow functions can be used directly with variables like -
+const Fruit =()=>{
+  return <p>I had an apple.</p>;
+}
+export default Fruit;
