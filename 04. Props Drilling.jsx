@@ -4,6 +4,8 @@
 
 //  Which I would personally recommend as a DO NOT TRY AT HOME, cause we don't know what kinda msg you have and what kinda msg your friend's gonna reply and how it will come back to you, but if you do, I'm up for the tea about what happened next!
 
+import React from "react"
+
 function App (){
   return (
     < Parent message="Hallo, Freundin!"/>
@@ -29,4 +31,33 @@ function Freundin({message}) {
 
 export default App;
 
-// Redux is used for this, to efficiently use 
+
+// Using Context
+import React, {createContext, useContext} from "react"
+
+const MessageContext = createContext();
+
+function AppData() {
+    return (
+        <MessageContext.Provider value="Hallo, Freundin">
+            <ParentComp />
+        </MessageContext.Provider>
+    )
+}
+
+function ParentComp() {
+    return <ChildComp />
+}
+
+function ChildComp() {
+    return <FreundinComp />
+}
+
+function FreundinComp() {
+    const msg = useContext(MessageContext)
+    return <p>{msg}</p>
+}
+
+export default AppData;
+
+// Redux is also used for this!
