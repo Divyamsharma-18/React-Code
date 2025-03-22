@@ -60,4 +60,4 @@ function FreundinComp() {
 
 export default AppData;
 
-// Redux is also used for this!
+// Redux is also used for this but it's better to use it for large scale applications!
