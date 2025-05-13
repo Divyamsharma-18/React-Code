@@ -58,6 +58,6 @@ function FreundinComp() {
     return <p>{msg}</p>
 }
 
-export default AppData;
+export default App;
 
 // Redux is also used for this but it's better to use it for large scale applications!
