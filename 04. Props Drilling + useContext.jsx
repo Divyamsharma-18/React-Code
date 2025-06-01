@@ -37,7 +37,7 @@ import React, {createContext, useContext} from "react"
 
 const MessageContext = createContext();
 
-function AppData() {
+function App() {
     return (
         <MessageContext.Provider value="Hallo, Freundin">
             <ParentComp />
